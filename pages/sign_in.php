@@ -42,7 +42,7 @@
 
     <div class="container">
         <br><br><br>
-        <form action="post">
+        <form id="form-sign-in" action="../pages/generic_page.php" method="post">
             <table>
                 <tr>
                     <td colspan="2" id="titulo-tabla">
@@ -54,7 +54,7 @@
                         Correo:
                     </td>
                     <td>
-                        <input type="email" name="email" id="" placeholder="Escriba Correo Electrónico">
+                        <input type="email" name="email" id="email" placeholder="Escriba Correo Electrónico">
                     </td>
                 </tr>
                 <tr>
@@ -62,7 +62,7 @@
                         Contraseña:
                     </td>
                     <td>
-                        <input type="password" name="pswd" id="" placeholder="Escriba Contraseña">
+                        <input type="password" name="pswd" id="pswd" placeholder="Escriba Contraseña">
                     </td>
                 </tr>
                 <tr>
@@ -72,9 +72,7 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <button type="submit" class="btn" id="btn-ok">
-                            Iniciar Sesión
-                        </button>
+                        <input type="button" class="btn" id="btn-ok" value="Iniciar Sesión" onclick="checkUser();">
                     </td>
                 </tr>
             </table>

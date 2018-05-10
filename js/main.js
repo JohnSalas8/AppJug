@@ -7,14 +7,36 @@ function randomColor() {
     ];
 }
 
-
 function checkUser() {
+    var xhttp = new XMLHttpRequest();
+    var email = document.getElementById('email').value;
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            if (this.responseText=="") {
+                document.getElementById("mssg").innerHTML = "No hay alguna cuenta con ese correo.";
+            } else {
+                var email = document.getElementById('email').value;
+                var pswd = document.getElementById('pswd').value;
+                checkPassword(email, pswd);
+            }
+        }
+    };
+    xhttp.open("POST", "../driver/check_user.php?email=" + email, true);
+    xhttp.send();
+}
+
+function checkPassword(email, pswd) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("mssg").innerHTML = this.responseText;
+            if (this.responseText=="") {
+                document.getElementById("mssg").innerHTML += "Contraseña erronea.";
+            } else {
+                document.getElementById("form-sign-in").submit();
+            }
         }
     };
-    xhttp.open("POST", "../driver/check_user.php", true);
+    console.log("../driver/check_password.php?email=" + email + "&pswd=" + pswd);
+    xhttp.open("POST", "../driver/check_password.php?email=" + email + "&pswd=" + pswd, true);
     xhttp.send();
 }
