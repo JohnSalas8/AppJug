@@ -6,6 +6,18 @@
     margin-left: 10px;
 }
 
+#myNavbar {
+    /*background: white;*/
+}
+
+.dropdown-toggle {
+    color: black;
+}
+
+.active {
+    background: #eeeeee;
+}
+
 .container {
     text-align: center;
 }
@@ -80,4 +92,14 @@ input[type="date"], input[type="number"], select {
 
 .obligatory {
     background: #cccccc;
+}
+
+.icon {
+    height: 20px;
+    width: 20px;
+}
+
+.sub-icon {
+    height: 15px;
+    width: 15px;
 }
