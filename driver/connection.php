@@ -4,11 +4,7 @@
         $server = "localhost";
         $user = "root";
         $pswd = "j24-cb09-ygo94";
-<<<<<<< HEAD
         $bdd = "app jug";
-=======
-        $bdd = "";
->>>>>>> 4c8923fa269ae182fb513db717adaa14954241cc
 
         // ESTE TIPO DE CONEXION ES SIN USAR PHPMYADMIN
         $connection = mysqli_connect($server, $user, $pswd) or die ("No se ha podido conectar con MySQL.");
