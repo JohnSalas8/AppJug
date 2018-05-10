@@ -69,6 +69,7 @@
                         <ul class="dropdown-menu" style="background: #080808;">
                             <li>
                                 <a href="#" class="items-menu-dropdown" style="color: #80858a;">
+                                    <img class="sub-icon" src="../icons-ilse/game-icon.png" alt="">
                                     Juegos
                                 </a>
                             </li>
@@ -90,6 +91,7 @@
                         <ul class="dropdown-menu" style="background: #080808;">
                             <li>
                                 <a href="#" class="items-menu-dropdown" style="color: #80858a;">
+                                    <img class="sub-icon" src="../icons-ilse/game-icon.png" alt="">
                                     Juegos
                                 </a>
                             </li>
