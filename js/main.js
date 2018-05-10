@@ -32,6 +32,8 @@ function checkPassword(email, pswd) {
             if (this.responseText=="") {
                 document.getElementById("mssg").innerHTML += "Contraseña erronea.";
             } else {
+                var email = document.getElementById('email').value;
+                localStorage.setItem('appjuguser', email);
                 document.getElementById("form-sign-in").submit();
             }
         }
@@ -39,4 +41,8 @@ function checkPassword(email, pswd) {
     console.log("../driver/check_password.php?email=" + email + "&pswd=" + pswd);
     xhttp.open("POST", "../driver/check_password.php?email=" + email + "&pswd=" + pswd, true);
     xhttp.send();
+}
+
+function logout() {
+    localStorage.removeItem("appjuguser");
 }

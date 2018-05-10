@@ -38,21 +38,21 @@
                         <img src="../imgs/IconoCompras.png" alt="" style="width: 23px; height: 23px;"> 
                         Mi Perfil
                         <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu" style="background: #080808;">
                             <li>
-                                <a href="DeleteCount.html" class="items-menu-dropdown" style="color: #80858a;">
+                                <a href="delete_count.php" class="items-menu-dropdown" style="color: #80858a;">
                                     <img class="sub-icon" src="../icons-ilse/eliminar.png" alt="">
                                     Borrar Mi Cuenta
                                 </a>
                             </li>
                             <li>
-                                <a href="ModifyCount.html" class="items-menu-dropdown" style="color: #80858a;">
+                                <a href="modify_count.php" class="items-menu-dropdown" style="color: #80858a;">
                                     <img class="sub-icon" src="../icons-ilse/editar.png" alt="">
                                     Modificar
                                 </a>
                             </li>
                             <li>
-                                <a href="ModifyCount.html" class="items-menu-dropdown" style="color: #80858a;">
+                                <a href="add_kid.php" class="items-menu-dropdown" style="color: #80858a;">
                                     <img class="sub-icon" src="../icons-ilse/crear.png" alt="">
                                     Agregar Niño
                                 </a>
@@ -68,13 +68,13 @@
                         <span class="caret"></span></a>
                         <ul class="dropdown-menu" style="background: #080808;">
                             <li>
-                                <a href="#" class="items-menu-dropdown" style="color: #80858a;">
+                                <a href="buy_game.php" class="items-menu-dropdown" style="color: #80858a;">
                                     <img class="sub-icon" src="../icons-ilse/game-icon.png" alt="">
                                     Juegos
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="items-menu-dropdown" style="color: #80858a;">
+                                <a href="buy_dlc.php" class="items-menu-dropdown" style="color: #80858a;">
                                     <img class="sub-icon" src="../icons-ilse/dlc.png" alt="">
                                     DLC
                                 </a>
@@ -90,13 +90,13 @@
                         <span class="caret"></span></a>
                         <ul class="dropdown-menu" style="background: #080808;">
                             <li>
-                                <a href="#" class="items-menu-dropdown" style="color: #80858a;">
+                                <a href="factura_game.php" class="items-menu-dropdown" style="color: #80858a;">
                                     <img class="sub-icon" src="../icons-ilse/game-icon.png" alt="">
                                     Juegos
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="items-menu-dropdown" style="color: #80858a;">
+                                <a href="factura_dlc.php" class="items-menu-dropdown" style="color: #80858a;">
                                     <img class="sub-icon" src="../icons-ilse/dlc.png" alt="">
                                     DLC
                                 </a>
@@ -106,23 +106,28 @@
                 </ul>
                 <ul class="nav navbar-nav">
                     <li class="">
-                        <a class="dropdown-toggle" href="index.php">
+                        <a class="dropdown-toggle" href="estadistics.php">
                             Estadísticas
                         </a>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="pages/consult_curp.php"> <img class="icon" src="../icons-ilse/cerrarses.png" alt=""> Cerrar Sesión</a></li>
+                    <li>
+                        <a href="../index.php" onclick="logout();">
+                            <img class="icon" src="../icons-ilse/cerrarses.png" alt=""> 
+                            Cerrar Sesión
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <div class="container">
-        <br><br>
+        <br><br><br>
         <h1>JUG</h1>
-        <img id="logo" src="img/logo_mex.jpg" alt="">
-        <p>
+        <img id="logo" src="../imgs/sindromeG.jpg" alt="">
+        <p id="text">
             < LETRITAS DE AMOR >
         </p>
     </div>
