@@ -20,6 +20,11 @@
     <div class="container">
         <table>
             <tr>
+                <td colspan="2" id="titulo-tabla">
+                    Facturas de Juegos
+                </td>
+            </tr>
+            <tr>
                 <td>
                     Viernes 17 de Nombre de 2017, 9:13
                 </td>

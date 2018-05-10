@@ -38,15 +38,23 @@
                         <img src="../imgs/IconoCompras.png" alt="" style="width: 23px; height: 23px;"> 
                         Mi Perfil
                         <span class="caret"></span></a>
-                        <ul class="dropdown-menu" style="background: #080808;">
+                        <ul class="dropdown-menu">
                             <li>
                                 <a href="DeleteCount.html" class="items-menu-dropdown" style="color: #80858a;">
-                                    Borrar Cuenta
+                                    <img class="sub-icon" src="../icons-ilse/eliminar.png" alt="">
+                                    Borrar Mi Cuenta
                                 </a>
                             </li>
                             <li>
                                 <a href="ModifyCount.html" class="items-menu-dropdown" style="color: #80858a;">
+                                    <img class="sub-icon" src="../icons-ilse/editar.png" alt="">
                                     Modificar
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ModifyCount.html" class="items-menu-dropdown" style="color: #80858a;">
+                                    <img class="sub-icon" src="../icons-ilse/crear.png" alt="">
+                                    Agregar Niño
                                 </a>
                             </li>
                         </ul>
@@ -66,6 +74,7 @@
                             </li>
                             <li>
                                 <a href="#" class="items-menu-dropdown" style="color: #80858a;">
+                                    <img class="sub-icon" src="../icons-ilse/dlc.png" alt="">
                                     DLC
                                 </a>
                             </li>
@@ -86,6 +95,7 @@
                             </li>
                             <li>
                                 <a href="#" class="items-menu-dropdown" style="color: #80858a;">
+                                    <img class="sub-icon" src="../icons-ilse/dlc.png" alt="">
                                     DLC
                                 </a>
                             </li>
@@ -94,20 +104,13 @@
                 </ul>
                 <ul class="nav navbar-nav">
                     <li class="">
-                        <a href="index.php">
+                        <a class="dropdown-toggle" href="index.php">
                             Estadísticas
                         </a>
                     </li>
                 </ul>
-                <ul class="nav navbar-nav">
-                    <li class="">
-                        <a href="index.php">
-                            Niños
-                        </a>
-                    </li>
-                </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="pages/consult_curp.php"><span class="glyphicon glyphicon-user"></span> Cerrar Sesión</a></li>
+                    <li><a href="pages/consult_curp.php"> <img class="icon" src="../icons-ilse/cerrarses.png" alt=""> Cerrar Sesión</a></li>
                 </ul>
             </div>
         </div>
