@@ -44,13 +44,15 @@
                 <tr>
                     <td> <?php echo $fecha; ?> </td>
                     <td>
-                        <button id="btn-wr" class="btn" <?php
-                            echo "onclick=\"";
-                                echo "show_full_factura.php?idFactura=$idFactura&kindProduct='juego'";
-                            echo "\"";
-                        ?> >
-                            Ver
-                        </button>
+                        <form method="post" <?php
+                                echo "action=\"";
+                                    echo "../driver/show_full_factura.php?idFactura=$idFactura&kindProduct=juego";
+                                echo "\"";
+                            ?> >
+                            <button id="btn-wr" class="btn">
+                                Ver
+                            </button>
+                        </form>
                     </td>
                 </tr>
 
@@ -93,13 +95,15 @@
                 <tr>
                     <td> <?php echo $fecha; ?> </td>
                     <td>
-                        <button id="btn-wr" class="btn" <?php
-                            echo "onclick=\"";
-                                echo "show_full_factura.php?idFactura=$idFactura&kindProduct='dlc'";
-                            echo "\"";
-                        ?> >
-                            Ver
-                        </button>
+                        <form method="post" <?php
+                                echo "action=\"";
+                                    echo "../driver/show_full_factura.php?idFactura=$idFactura&kindProduct=dlc";
+                                echo "\"";
+                            ?> >
+                            <button id="btn-wr" class="btn">
+                                Ver
+                            </button>
+                        </form>
                     </td>
                 </tr>
 

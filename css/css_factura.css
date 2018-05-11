@@ -1,0 +1,41 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26/11/2017, 01:33:27 AM
+    Author     : john
+*/
+
+.headers {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+table[id="fullFactura"] {
+    margin-left: 35px;
+}
+
+table, td, th, tr {
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+.def {
+    font-size: 13px;
+}
+
+.cantidades {
+    text-align: right;
+    background: #d9d9d9;
+}
+
+.header {
+    background: #005a8c;
+    color: white;
+}
+
+#tableFacturas {
+    background: #f2f2f2;
+}
