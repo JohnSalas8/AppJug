@@ -139,7 +139,7 @@
         };
         var email = localStorage.getItem('appjuguser');
         var idResp = localStorage.getItem(email);
-        xhttp.open("GET", "../driver/show_all_facturas.php?idResp=" + idResp + "&kindProduct=juego", true);
+        xhttp.open("POST", "../driver/show_all_facturas.php?idResp=" + idResp + "&kindProduct=juego", true);
         xhttp.send();
     </script>
 

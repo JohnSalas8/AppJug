@@ -125,33 +125,22 @@
         </div>
     </nav>
 
-    <div class="container">
-        <br><br><br>
-        <table>
-            <tr>
-                <td colspan="2" id="titulo-tabla">
-                    Facturas de DLCs
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Viernes 17 de Nombre de 2017, 9:13
-                </td>
-                <td>
-                    <button class="btn" id="btn-wr">Ver</button>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    Viernes 17 de Nombre de 2017, 9:13
-                </td>
-                <td>
-                    <button class="btn" id="btn-wr">Ver</button>
-                </td>
-            </tr>
-        </table>
-    </div>
+        <div id="div-games" class="container">
+                
+        </div>
+    
+        <script>
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("div-games").innerHTML = this.responseText;
+                }
+            };
+            var email = localStorage.getItem('appjuguser');
+            var idResp = localStorage.getItem(email);
+            xhttp.open("POST", "../driver/show_all_facturas.php?idResp=" + idResp + "&kindProduct=dlc", true);
+            xhttp.send();
+        </script>
 
 </body>
 </html>

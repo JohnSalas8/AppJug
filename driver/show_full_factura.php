@@ -6,7 +6,7 @@
     <title>APP JUG</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="../css/css_fectura.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/css_factura.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -35,7 +35,7 @@
                     <li><a href="index.php">Inicio</a></li>
                 </ul>
                 <ul class="nav navbar-nav">
-                    <li class="active dropdown">
+                    <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#"> 
                         <img src="../imgs/IconoPerfil.png" alt="" style="width: 23px; height: 23px;"> 
                         Mi Perfil
@@ -85,7 +85,7 @@
                     </li>
                 </ul>
                 <ul class="nav navbar-nav">
-                    <li class="dropdown">
+                    <li class="active dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#"> 
                         <img src="../imgs/IconoFactura.png" alt="" style="width: 23px; height: 23px;">
                         Facturas
@@ -238,7 +238,6 @@
                         $iva = $line["iva"];
                         $total = $line["total"];
                     }
-                    echo $nameGame . " " . $descGame;
                 ?>
                 <td class="cantidades"><?php echo $idProducto; ?></td>
                 <td><?php echo $nameGame; ?></td>
@@ -290,6 +289,14 @@
                 mysqli_close($connection);
 
             ?>
+            <tr>
+               <td colspan="6">
+                   <br><br>
+                   <button id="btn-ok" class="btn" onclick="history.back();">
+                       <- Volver
+                   </button>
+               </td> 
+            </tr>
         </table>
     </div>
 
