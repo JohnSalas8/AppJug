@@ -193,5 +193,19 @@
     <script>
         hideWindowModal();
     </script>
+
+    <footer class="footer " style="color: white; position: absolute; bottom: 0; width:100%;">
+       <div class="container" style="background-color:#AAB7B8">
+        !Contactanos¡
+        <br>
+            <a href="https://www.facebook.com">
+                <img src="../imgs/Fnegro.png" width="32px" height="32px">
+            </a>
+            <a href="https://twitter.com/">
+                <img src="../imgs/twitterN.png" width="32px" height="32px">
+            </a>
+        <br>
+        Copyright © 2018 | Ilse, Juan, Martin, Carlos
+    </div>
 </body>
 </html>
