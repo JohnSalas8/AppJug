@@ -21,8 +21,8 @@ function setStarY (star) {
 }*/
 
 function buyGame (idResp) {
-    var btn = document.getElementById('bttnComprar');
-    btn.style.background = '#2eb82e';
+    var btn = document.getElementById('btn-wr');
+    btn.style.background = 'rgb(76, 88, 99);';
     btn.innerHTML = 'Comprado';
     
     var fullDate = getFullDate();
@@ -34,7 +34,7 @@ function buyGame (idResp) {
         }
     };
     xhttp.open(
-            "POST", "../driver/createFactura.jsp?idResp="+idResp+"&idProduct="+idgame+"&fecha="+fullDate+'&kindProduct=juego',
+            "POST", "../driver/create_factura.php?idResp="+idResp+"&idProduct="+idgame+"&fecha="+fullDate+'&kindProduct=juego',
             true);
     xhttp.send(null);
 }
@@ -149,8 +149,8 @@ function showWindowModal() {
     
     // popup-contenedor
     windowModal = document.getElementById('popup-contenedor');
+    windowModal.style.margin = '10% auto';
     windowModal.style.marginTop = '60px';
-    //windowModal.style.margin = '5% auto';
     //windowModal.style.
     
 }
