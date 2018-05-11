@@ -121,8 +121,80 @@
                     </li>
                 </ul>
             </div>
+            <div class="modal-wrapper" id="popup">
+        <div id="popup-contenedor" class="popup-contenedor">
+            <div id="divCont">
+                <table id="tableMain">
+                    <tr>
+                        <td id="descGame">
+                            
+                        </td>
+                    </tr>
+                    <th colspan="2" class="todosComentarios">
+                        COMENTARIOS
+                    </th>
+                    <tr class="todosComentarios">
+                        <td colspan="2">
+                            <div id="allCmnts">
+                                <table id="cmntTable">
+
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                    <th id="errFactura" colspan="2" class="todosComentarios"> </th>
+                    <tr>
+                        <td colspan="2">
+                            <table class="comentarios">
+                                <tr id="Comentario">
+                                    <td colspan="2" id="paraComentar">
+                                        
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <button id="btnCerrar" onclick="hideWindowModal()">x</button>
+        </div>
+    </div>
         </div>
     </nav>
 
+    <script>
+        hideWindowModal();
+    </script>
+
+    <div class="container">
+        <br><br><br>
+        <?php
+
+            require("../driver/connection.php");
+
+            $connection = connect_to_mysql();
+
+            $query = "select * from view_juegos;";
+            $result = mysqli_query($connection, $query);
+            
+            while ($line = mysqli_fetch_array($result)) {
+                ?>
+                <div class="show-game">
+                    <h3>
+                    <?php
+                        echo $line['nombre'];
+                    ?>
+                    </h3>
+                    <br>
+                    <img class="muestra-game" src="../imgs/ControlGame.png" alt="">
+                    <br>
+                    <input type="button" class="btn" id="btn-ok" value="Ver" onclick="showWindowModal();">
+                </div>
+                <?php
+            }
+
+            mysqli_close($connection);
+        ?>
+    </div>
 </body>
 </html>
