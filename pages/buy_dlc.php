@@ -10,6 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/eventsWindowModalDLC.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -123,6 +124,75 @@
             </div>
         </div>
     </nav>
+
+        <div class="container">
+
+            <br><br><br>
+
+            <?php
+
+                require("../driver/connection.php");
+
+                $connection = connect_to_mysql();
+
+                $query = "select * from view_dlc;";
+                $result = mysqli_query($connection, $query);
+                
+                while ($line = mysqli_fetch_array($result)) {
+                    ?>
+                    <div class="show-game">
+                        <h3>
+                        <?php
+                            $name_game = $line['nombre'];
+                            $id_game = $line['id_DLC'];
+                            $precio_game = $line['precio'];
+                            echo $name_game;
+                        ?>
+                        </h3>
+                        <br>
+                        <img class="muestra-game" src="../imgs/ControlGame.png" alt="">
+                        <br>
+                        <input type="button" class="btn" id="btn-ok" value="Ver" <?php 
+                            echo "onclick=\"";
+                                echo "updateModalWindow('$name_game', $id_game, $precio_game); showWindowModal();";
+                            echo "\"";
+                        ?>>
+                    </div>
+                    <?php
+                }
+
+                mysqli_close($connection);
+            ?>
+            </div>
+
+
+            <div class="" id="popup">
+                <div id="popup-contenedor" class="popup-contenedor">
+                    <div id="divCont">
+                        <div id="descGame">
+
+                        </div>
+                        <div class="todosComentarios allCmnts desc" id="cmntTable">
+
+                        </div>
+                        <div id="errFactura" class="todosComentarios">
+
+                        </div>
+                        <div class="comentarios desc">
+                            <div id="comentarios">
+                                <div id="paraComentar">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="btnCerrar" onclick="hideWindowModal()">x</button>
+                </div>
+            </div>
+
+            <script>
+                hideWindowModal();
+            </script>
 
 </body>
 </html>

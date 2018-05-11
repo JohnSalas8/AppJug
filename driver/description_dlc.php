@@ -2,29 +2,23 @@
 
     require("connection.php");
 
-    $nameGame = $_REQUEST['nameGame'];
-    $precio = $_REQUEST['precio'];
-    $idGame = $_REQUEST['idGame'];
-    $user_id = $_REQUEST['user_id'];
-
-    $query = "select califPromGame("
-        . $idGame 
-        . ") as promedio;";
-
     $connection = connect_to_mysql();
 
-    $result = mysqli_query($connection, $query);
-    $line = mysqli_fetch_array($result);
+    $nameDlc = $_REQUEST['nameDlc'];
+    $precio = $_REQUEST['precio'];
+    $idDlc = $_REQUEST['idDLC'];
+    $user_id = $_REQUEST['user_id'];
 
 ?>
 
 <div class="desc">
     <h2 class="desc" id="nameGame">
-        <?php echo $nameGame; ?>
+        <?php echo $nameDlc; ?>
     </h2>
     <div id="img-desc" class="desc">
         <img src="../imgs/ControlGame.png" style="height: 150px; width: 150px;">
     </div>
+    <!--
     <div id="Calificacion" class="desc">Calificación: <br>
         <?php 
 
@@ -51,7 +45,7 @@
             }
 
         ?>
-    </div>
+    </div> -->
     <div id="precio" class="desc">
         <?php if ($precio==0 || $precio==0.0) { ?>
             Gratis.
@@ -63,10 +57,11 @@
         <?php   if ($precio==0 || $precio==0.0) { ?>
             
         <?php } else { 
-                    $query = "select * from compra_juego, factura where compra_juego.id_Juego="
-                        . $idGame 
-                        . " and factura.id_Factura=compra_juego.id_Factura and factura.id_Resp="
-                        . $user_id . ";";
+                    $query = "select * from compra_dlc, factura where compra_dlc.id_DLC="
+                        . $idDlc
+                        . " and factura.id_Factura=compra_dlc.id_Factura and factura.id_Resp="
+                        . $user.id
+                        . ";";
                     $result = mysqli_query ($connection, $query);
                 if (mysqli_num_rows($result)==0) {
         ?>
