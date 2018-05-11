@@ -22,7 +22,8 @@ function setStarY (star) {
 
 function buyGame (idResp) {
     var btn = document.getElementById('btn-wr');
-    btn.style.background = 'rgb(76, 88, 99);';
+    btn.style.background = '#4c5863';
+    btn.style.color = 'lightgray';
     btn.innerHTML = 'Comprado';
     
     var fullDate = getFullDate();

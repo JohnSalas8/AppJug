@@ -17,12 +17,12 @@
 
     $result = mysqli_query($connection, $query);
 
-    if (($line = mysql_fetch_array($result))!=0) {
+    if (($line = mysqli_fetch_array($result))!=0) {
         $idFactura = $line['id_Factura'];
 
-        if (kindProduct=="juego") {
+        if ($kindProduct=="juego") {
             $query = "insert into compra_juego(id_Juego, id_Factura, habilitado) values (" 
-                . idProduct . "," 
+                . $idProduct . "," 
                 . $idFactura 
                 . ",1);";
             

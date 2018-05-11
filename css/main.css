@@ -81,9 +81,9 @@
 #btn-sold {
     width: 15em;
     padding: 8px;
-    color: rgb(76, 88, 99);
+    color: lightgray;
     font-weight: bold;
-    background: lightgray;
+    background: rgb(76, 88, 99);
 }
 
 #mssg {
