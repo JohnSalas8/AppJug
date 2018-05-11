@@ -28,7 +28,7 @@
             
                 $result = mysqli_query($connection, $query);                
         } else {
-            "insert into compra_dlc(id_DLC, id_Factura, habilitado) values (" 
+            $query = "insert into compra_dlc(id_DLC, id_Factura, habilitado) values (" 
                 . $idProduct 
                 . ","
                 . $idFactura 
