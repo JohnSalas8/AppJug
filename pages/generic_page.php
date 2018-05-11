@@ -35,7 +35,7 @@
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#"> 
-                        <img src="../icons-ilse/IconoMiPerfil.png" alt="" style="width: 23px; height: 23px;"> 
+                        <img src="../imgs/IconoPerfil.png" alt="" style="width: 23px; height: 23px;"> 
                         Mi Perfil
                         <span class="caret"></span></a>
                         <ul class="dropdown-menu" style="background: #080808;">
@@ -63,7 +63,7 @@
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#"> 
-                        <img src="../icons-ilse/IconoCompras.png" alt="" style="width: 23px; height: 23px;"> 
+                        <img src="../imgs/IconoCompras.png" alt="" style="width: 23px; height: 23px;"> 
                         Compras
                         <span class="caret"></span></a>
                         <ul class="dropdown-menu" style="background: #080808;">
@@ -85,7 +85,7 @@
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#"> 
-                        <img src="../icons-ilse/IconoFacturas.png" alt="" style="width: 23px; height: 23px;">
+                        <img src="../imgs/IconoFactura.png" alt="" style="width: 23px; height: 23px;">
                         Facturas
                         <span class="caret"></span></a>
                         <ul class="dropdown-menu" style="background: #080808;">
@@ -107,7 +107,7 @@
                 <ul class="nav navbar-nav">
                     <li class="">
                         <a class="dropdown-toggle" href="estadistics.php">
-                            <img src="../icons-ilse/IconoEstadistics.png" alt="" style="width: 23px; height: 23px;">
+                            <img src="../imgs/IconoEstadisticas.png" alt="" style="width: 23px; height: 23px;">
                             Estadísticas
                         </a>
                     </li>

@@ -73,7 +73,7 @@
                     <td>
                         <input type="password" name="pswd" id="pswd" placeholder="Escriba Contraseña"
                             <?php
-                                $pswd = $_POST['pswd'];
+                                $pswd = $_POST['pswd1'];
 
                                 if ($pswd!="") {
                                     echo "value='$pswd' ";
