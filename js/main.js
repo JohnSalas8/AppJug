@@ -45,7 +45,7 @@ function checkPassword(email, pswd, user_id) {
 }
 
 function logout() {
-    email = localStorage.getItem('appjuguser');
+    var email = localStorage.getItem('appjuguser');
     localStorage.removeItem("appjuguser");
     localStorage.removeItem(email);
 }
