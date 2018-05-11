@@ -17,7 +17,7 @@ function checkUser() {
             } else {
                 var email = document.getElementById('email').value;
                 var pswd = document.getElementById('pswd').value;
-                checkPassword(email, pswd);
+                checkPassword(email, pswd, this.responseText);
             }
         }
     };
@@ -25,7 +25,7 @@ function checkUser() {
     xhttp.send();
 }
 
-function checkPassword(email, pswd) {
+function checkPassword(email, pswd, user_id) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -34,6 +34,7 @@ function checkPassword(email, pswd) {
             } else {
                 var email = document.getElementById('email').value;
                 localStorage.setItem('appjuguser', email);
+                localStorage.setItem( email, user_id);
                 document.getElementById("form-sign-in").submit();
             }
         }
@@ -98,37 +99,4 @@ function createCount() {
         + "&pswd=" + pswd1
     , true);
     xhttp.send();
-}
-
-function hideWindowModal() {
-    windowModal = document.getElementById('popup');
-    windowModal.style.visibility = 'hidden';
-    windowModal.style.width = '0px';
-    windowModal.style.height = '0px';
-    windowModal.style.opacity = '0';
-    windowModal.style.marginTop = '-200px';
-}
-
-function showWindowModal() {
-    windowModal = document.getElementById('popup');
-    windowModal.style.width = '100%';
-    windowModal.style.height = '100%';
-    windowModal.style.opacity = '1';
-    windowModal.style.backgroundColor = 'rgba(0,0,0,0.8)';
-    windowModal.style.position = 'fixed';
-    windowModal.style.top = '0';
-    windowModal.style.left = '0';
-    windowModal.style.right = '0';
-    windowModal.style.bottom = '0';
-    windowModal.style.zIndex = '999';
-    windowModal.style.transition = 'all 1s';
-    windowModal.style.marginTop = '0px';
-    windowModal.style.visibility = 'visible';
-    
-    // popup-contenedor
-    windowModal = document.getElementById('popup-contenedor');
-    windowModal.style.marginTop = '20px';
-    //windowModal.style.margin = '5% auto';
-    //windowModal.style.
-    
 }

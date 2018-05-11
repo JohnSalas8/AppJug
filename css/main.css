@@ -78,6 +78,14 @@
     background: #ffcc00;
 }
 
+#btn-sold {
+    width: 15em;
+    padding: 8px;
+    color: lightslategray;
+    font-weight: bold;
+    background: lightgray;
+}
+
 #mssg {
     color: red;
 }
@@ -122,27 +130,19 @@ input[type="date"], input[type="number"], select {
 
 .popup-contenedor {
     position: relative;
-    margin:5% auto;
-    background-color: #f2f2f2;
     color:#333;
     border-radius: 3px;
-    width:50%;
+    width: 80%;
 }
 
 .desc, .user_name {
     font-weight: bold;
+    background: #f2f2f2;
+    text-align: center;
 }
 
 .user_name {
     text-align: left;
-}
-
-.starts {
-    text-align: right;
-}
-
-#bttnComprar {
-    height: 30px;
 }
 
 .comentarios {
@@ -154,18 +154,10 @@ input[type="date"], input[type="number"], select {
     text-align: right;
 }
 
-.descCmnt {
-    text-align: left;
-}
-
 #cmntTable {
     width: 100%;
-    background: #d9d9d9
-}
-
-#btnComentar {
-    width: 120px;
-    height: 30px;
+    height: 10em;
+    overflow-y: auto;
 }
 
 .stars {
@@ -173,28 +165,16 @@ input[type="date"], input[type="number"], select {
     width: 20px;
 }
 
-.contornoCmnt {
-    border: 1px solid lightslategray
-}
-
-#Comentario {
-    background: #f2f2f2;
+.comentario {
+    width: 100%;
+    background: #d9d9d9;
 }
 
 textarea {
     width: 98%;
-    height: 70px
+    height: 50px
 }
 
-#allCmnts {
-    height: 120px;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-.todosComentarios {
-    background: #f2f2f2;
-}
 
 #btnCerrar {
     position: absolute;

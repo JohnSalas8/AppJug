@@ -10,6 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/eventsWindowModal.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -121,53 +122,13 @@
                     </li>
                 </ul>
             </div>
-            <div class="modal-wrapper" id="popup">
-        <div id="popup-contenedor" class="popup-contenedor">
-            <div id="divCont">
-                <table id="tableMain">
-                    <tr>
-                        <td id="descGame">
-                            
-                        </td>
-                    </tr>
-                    <th colspan="2" class="todosComentarios">
-                        COMENTARIOS
-                    </th>
-                    <tr class="todosComentarios">
-                        <td colspan="2">
-                            <div id="allCmnts">
-                                <table id="cmntTable">
-
-                                </table>
-                            </div>
-                        </td>
-                    </tr>
-                    <th id="errFactura" colspan="2" class="todosComentarios"> </th>
-                    <tr>
-                        <td colspan="2">
-                            <table class="comentarios">
-                                <tr id="Comentario">
-                                    <td colspan="2" id="paraComentar">
-                                        
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <button id="btnCerrar" onclick="hideWindowModal()">x</button>
-        </div>
-    </div>
         </div>
     </nav>
 
-    <script>
-        hideWindowModal();
-    </script>
-
     <div class="container">
+
         <br><br><br>
+
         <?php
 
             require("../driver/connection.php");
@@ -182,13 +143,20 @@
                 <div class="show-game">
                     <h3>
                     <?php
-                        echo $line['nombre'];
+                        $name_game = $line['nombre'];
+                        $id_game = $line['id_Juego'];
+                        $precio_game = $line['precio'];
+                        echo $name_game;
                     ?>
                     </h3>
                     <br>
                     <img class="muestra-game" src="../imgs/ControlGame.png" alt="">
                     <br>
-                    <input type="button" class="btn" id="btn-ok" value="Ver" onclick="showWindowModal();">
+                    <input type="button" class="btn" id="btn-ok" value="Ver" <?php 
+                        echo "onclick=\"";
+                            echo "updateModalWindow('$name_game', $id_game, $precio_game); showWindowModal();";
+                        echo "\"";
+                    ?>>
                 </div>
                 <?php
             }
@@ -196,5 +164,34 @@
             mysqli_close($connection);
         ?>
     </div>
+
+
+    <div class="" id="popup">
+        <div id="popup-contenedor" class="popup-contenedor">
+            <div id="divCont">
+                <div id="descGame">
+
+                </div>
+                <div class="todosComentarios allCmnts desc" id="cmntTable">
+
+                </div>
+                <div id="errFactura" class="todosComentarios">
+
+                </div>
+                <div class="comentarios desc">
+                    <div id="comentarios">
+                        <div id="paraComentar">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button id="btnCerrar" onclick="hideWindowModal()">x</button>
+        </div>
+    </div>
+
+    <script>
+        hideWindowModal();
+    </script>
 </body>
 </html>
