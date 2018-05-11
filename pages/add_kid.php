@@ -124,5 +124,41 @@
         </div>
     </nav>
 
+    <div class="container">
+        <br><br><br>
+        <form action="">
+            <table>
+                <tr>
+                    <td id="titulo-tabla" colspan="2">
+                        Agregar Niño
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Nombre:
+                    </td>
+                    <td>
+                        <input type="text" name="firstame" id="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Fecha de Nacimiento:
+                    </td>
+                    <td>
+                        <input type="date" name="birthdate" id="">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button id="btn-games" class="btn" type="submit" onclick="">
+                            Agregar
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
 </body>
 </html>
