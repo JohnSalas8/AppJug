@@ -17,7 +17,7 @@
 
     $result = mysqli_query($connection, $query);
 
-    if ($line = mysql_fetch_array($result)!=0) {
+    if (($line = mysql_fetch_array($result))!=0) {
         $idFactura = $line['id_Factura'];
 
         if (kindProduct=="juego") {
