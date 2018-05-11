@@ -13,13 +13,5 @@
 
         return $connection;
     }
-
-    function close_connection($connection) {
-        mysqli_close($connection);
-    }
-
-    function exe_query($connection, $query) {
-        return mysqli_query($connection, $query);
-    }
         
 ?>

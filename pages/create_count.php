@@ -43,7 +43,7 @@
 
     <div class="container">
         <br><br><br>
-        <form action="../driver/create_user.php" method="post">
+        <form id="form-create-count" action="sign_in.php" method="post">
             <table>
                 <tr>
                     <td colspan="2" id="titulo-tabla">
@@ -108,7 +108,7 @@
                         Miembro desde:
                     </td>
                     <td>
-                        <input type="date" name="sense-year" id="sense-year">
+                        <input type="number" name="sense-year" id="sense-year" min="1990" value="2018" max="2018">
                     </td>
                 </tr>
                 <tr class="obligatory">
@@ -177,15 +177,7 @@
                         Telefono:
                     </td>
                     <td>
-                        <input type="text" name="phone" id="phone" placeholder="Ej: X-XX-XX-XX">
-                    </td>
-                </tr>
-                <tr class="obligatory">
-                    <td>
-                        Celular:
-                    </td>
-                    <td>
-                        <input type="text" name="cellphone" id="cellphone" placeholder="Ej: 044-449-XXX-XXXX">
+                        <input type="text" name="cell" id="cell" placeholder="Ej: Tel. Casa o Celular">
                     </td>
                 </tr>
                 <tr class="obligatory">
@@ -219,9 +211,7 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <button type="submit" class="btn" id="btn-ok">
-                            Crear Cuenta
-                        </button>
+                        <input type="button" class="btn" id="btn-ok" value="Crear Cuenta" onclick="createCount();">
                     </td>
                 </tr>
             </table>

@@ -9,9 +9,9 @@
 
     $query = "select nombre from responsable where correo='$email' and pass='$pswd';";
 
-    $result = exe_query($connection, $query);
+    $result = mysqli_query($connection, $query);
 
-    close_connection($connection);
+    mysqli_close($connection);
 
     if(mysqli_num_rows($result)==0) {
         echo "";

@@ -54,7 +54,16 @@
                         Correo:
                     </td>
                     <td>
-                        <input type="email" name="email" id="email" placeholder="Escriba Correo Electrónico">
+                        <input type="email" name="email" id="email" placeholder="Escriba Correo Electrónico"
+                            <?php
+                                $email = $_POST['email'];
+
+                                if ($email!="") {
+                                    echo "value='$email' ";
+                                }
+                                
+                            ?>
+                        >
                     </td>
                 </tr>
                 <tr>
@@ -62,7 +71,16 @@
                         Contraseña:
                     </td>
                     <td>
-                        <input type="password" name="pswd" id="pswd" placeholder="Escriba Contraseña">
+                        <input type="password" name="pswd" id="pswd" placeholder="Escriba Contraseña"
+                            <?php
+                                $pswd = $_POST['pswd'];
+
+                                if ($pswd!="") {
+                                    echo "value='$pswd' ";
+                                }
+                                
+                            ?>
+                        >
                     </td>
                 </tr>
                 <tr>
