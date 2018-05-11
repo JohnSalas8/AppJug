@@ -31,7 +31,7 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li><a href="index.php">Inicio</a></li>
+                    <li><a href="generic_page.php">Inicio</a></li>
                 </ul>
                 <ul class="nav navbar-nav">
                     <li class="dropdown">

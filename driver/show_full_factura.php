@@ -32,7 +32,7 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li><a href="index.php">Inicio</a></li>
+                    <li><a href="../pages/generic_page.php">Inicio</a></li>
                 </ul>
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
@@ -42,19 +42,19 @@
                         <span class="caret"></span></a>
                         <ul class="dropdown-menu" style="background: #080808;">
                             <li>
-                                <a href="delete_count.php" class="items-menu-dropdown" style="color: #80858a;">
+                                <a href="../pages/delete_count.php" class="items-menu-dropdown" style="color: #80858a;">
                                     <img class="sub-icon" src="../icons-ilse/eliminar.png" alt="">
                                     Borrar Mi Cuenta
                                 </a>
                             </li>
                             <li>
-                                <a href="modify_count.php" class="items-menu-dropdown" style="color: #80858a;">
+                                <a href="../pages/modify_count.php" class="items-menu-dropdown" style="color: #80858a;">
                                     <img class="sub-icon" src="../icons-ilse/editar.png" alt="">
                                     Modificar
                                 </a>
                             </li>
                             <li>
-                                <a href="add_kid.php" class="items-menu-dropdown" style="color: #80858a;">
+                                <a href="../pages/add_kid.php" class="items-menu-dropdown" style="color: #80858a;">
                                     <img class="sub-icon" src="../icons-ilse/crear.png" alt="">
                                     Agregar Niño
                                 </a>
@@ -70,13 +70,13 @@
                         <span class="caret"></span></a>
                         <ul class="dropdown-menu" style="background: #080808;">
                             <li>
-                                <a href="buy_game.php" class="items-menu-dropdown" style="color: #80858a;">
+                                <a href="../pages/buy_game.php" class="items-menu-dropdown" style="color: #80858a;">
                                     <img class="sub-icon" src="../icons-ilse/game-icon.png" alt="">
                                     Juegos
                                 </a>
                             </li>
                             <li>
-                                <a href="buy_dlc.php" class="items-menu-dropdown" style="color: #80858a;">
+                                <a href="../pages/buy_dlc.php" class="items-menu-dropdown" style="color: #80858a;">
                                     <img class="sub-icon" src="../icons-ilse/dlc.png" alt="">
                                     DLC
                                 </a>
@@ -92,13 +92,13 @@
                         <span class="caret"></span></a>
                         <ul class="dropdown-menu" style="background: #080808;">
                             <li>
-                                <a href="factura_game.php" class="items-menu-dropdown" style="color: #80858a;">
+                                <a href="../pages/factura_game.php" class="items-menu-dropdown" style="color: #80858a;">
                                     <img class="sub-icon" src="../icons-ilse/game-icon.png" alt="">
                                     Juegos
                                 </a>
                             </li>
                             <li>
-                                <a href="factura_dlc.php" class="items-menu-dropdown" style="color: #80858a;">
+                                <a href="../pages/factura_dlc.php" class="items-menu-dropdown" style="color: #80858a;">
                                     <img class="sub-icon" src="../icons-ilse/dlc.png" alt="">
                                     DLC
                                 </a>
@@ -108,7 +108,7 @@
                 </ul>
                 <ul class="nav navbar-nav">
                     <li class="">
-                        <a class="dropdown-toggle" href="estadistics.php">
+                        <a class="dropdown-toggle" href="../pages/estadistics.php">
                             <img src="../imgs/IconoEstadisticas.png" alt="" style="width: 23px; height: 23px;">
                             Estadísticas
                         </a>
