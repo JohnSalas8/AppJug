@@ -13,13 +13,37 @@
 </head>
 <body>
     
-    <!--
-        FALTA LA NAVBAR
-    -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <a id="title-jug" class="navbar-brand" href="#">
+                    APP JUG
+                </a>
+
+                <script>
+                    randomColor();
+                </script>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <button class="btn navbar-btn" id="btn-games">Juegos</button>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="sign_in.php"><span class="glyphicon glyphicon-user"></span> Iniciar Sesión</a></li>
+                    <li><a href="../pages/create_count.php"><span class="glyphicon glyphicon-log-in"></span> Registrarse</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <div class="container">
-        <br><br>
-        <form action="">
+        <br><br><br>
+        <form action="../driver/create_user.php" method="post">
             <table>
                 <tr>
                     <td colspan="2" id="titulo-tabla">
@@ -36,7 +60,7 @@
                         Nombre(s):
                     </td>
                     <td>
-                        <input type="text" name="firstname" id="" placeholder="Escriba su(s) Nombre(s)">
+                        <input type="text" name="firstname" id="firstname" placeholder="Escriba su(s) Nombre(s)">
                     </td>
                 </tr>
                 <tr class="obligatory">
@@ -44,7 +68,7 @@
                         Apellido Paterno:
                     </td>
                     <td>
-                        <input type="text" name="lastnamep" id="" placeholder="Escriba su Apellido Paterno">
+                        <input type="text" name="lastnamep" id="lastnamep" placeholder="Escriba su Apellido Paterno">
                     </td>
                 </tr>
                 <tr class="obligatory">
@@ -52,7 +76,7 @@
                         Apellido Materno:
                     </td>
                     <td>
-                        <input type="text" name="lastnamem" id="" placeholder="Escriba su Apellido Materno">
+                        <input type="text" name="lastnamem" id="lastnamem" placeholder="Escriba su Apellido Materno">
                     </td>
                 </tr>
                 <tr class="obligatory">
@@ -60,47 +84,47 @@
                         RFC:
                     </td>
                     <td>
-                        <input type="text" name="rfc" id="" placeholder="Escriba su RFC">
+                        <input type="text" name="rfc" id="rfc" placeholder="Escriba su RFC">
                     </td>
                 </tr>
-                <tr>
+                <tr class="obligatory">
                     <td>
                         Num. de Tarjeta:
                     </td>
                     <td>
-                        <input type="text" name="num-card" id="" placeholder="Escriba su Número de Tarjeta">
+                        <input type="text" name="num-card" id="num-card" placeholder="Escriba su Número de Tarjeta">
                     </td>
                 </tr>
-                <tr>
+                <tr class="obligatory">
                     <td>
                         Clave:
                     </td>
                     <td>
-                        <input type="text" name="code-card" id="" placeholder="Escriba la clave de su Tarjeta">
+                        <input type="text" name="code-card" id="code-card" placeholder="Escriba la clave de su Tarjeta">
                     </td>
                 </tr>
-                <tr>
+                <tr class="obligatory">
                     <td>
                         Miembro desde:
                     </td>
                     <td>
-                        <input type="date" name="sense-year" id="">
+                        <input type="date" name="sense-year" id="sense-year">
                     </td>
                 </tr>
-                <tr>
+                <tr class="obligatory">
                     <td>
                         Hasta que Mes y Año:
                     </td>
                     <td>
-                        <input type="month" name="until-month-year" id="" min="2018-04">
+                        <input type="month" name="until-month-year" id="until-month-year" min="2018-04">
                     </td>
                 </tr>
-                <tr>
+                <tr class="obligatory">
                     <td>
                         Ciudad:
                     </td>
                     <td>
-                        <select name="city">
+                        <select name="city" id="city">
                             <option>Selección</option>
                             <option>Aguascalientes</option>
                             <option>Asientos</option>
@@ -116,52 +140,52 @@
                         </select>
                     </td>
                 </tr>
-                <tr>
+                <tr class="obligatory">
                     <td>
                         Código Postal:
                     </td>
                     <td>
-                        <input type="number" name="sense" id="">
+                        <input type="number" name="postal-code" id="postal-code" min="0">
                     </td>
                 </tr>
-                <tr>
+                <tr class="obligatory">
                     <td>
                         Fraccionamiento:
                     </td>
                     <td>
-                        <input type="number" name="sense" id="">
+                        <input type="text" name="fracc" id="fracc">
                     </td>
                 </tr>
-                <tr>
+                <tr class="obligatory">
                     <td>
                         Calle:
                     </td>
                     <td>
-                        <input type="number" name="sense" id="">
+                        <input type="text" name="street" id="street">
                     </td>
                 </tr>
-                <tr>
+                <tr class="obligatory">
                     <td>
                         Número de Casa:
                     </td>
                     <td>
-                        <input type="number" name="number-home" id=""placeholder="S/N = 0" min="0">
+                        <input type="number" name="number-home" id="number-home" placeholder="S/N = 0" min="0">
                     </td>
                 </tr>
-                <tr>
+                <tr class="obligatory">
                     <td>
                         Telefono:
                     </td>
                     <td>
-                        <input type="text" name="phone" id="" placeholder="Ej: X-XX-XX-XX">
+                        <input type="text" name="phone" id="phone" placeholder="Ej: X-XX-XX-XX">
                     </td>
                 </tr>
-                <tr>
+                <tr class="obligatory">
                     <td>
                         Celular:
                     </td>
                     <td>
-                        <input type="text" name="cellphone" id="" placeholder="Ej: 044-449-XXX-XXXX">
+                        <input type="text" name="cellphone" id="cellphone" placeholder="Ej: 044-449-XXX-XXXX">
                     </td>
                 </tr>
                 <tr class="obligatory">
@@ -169,7 +193,7 @@
                         Correo:
                     </td>
                     <td>
-                        <input type="email" name="email" id="" placeholder="ejemplo@dominio.com">
+                        <input type="email" name="email" id="email" placeholder="ejemplo@dominio.com">
                     </td>
                 </tr>
                 <tr class="obligatory">
@@ -177,7 +201,7 @@
                         Contraseña:
                     </td>
                     <td>
-                        <input type="password" name="pswd1" id="" placeholder="Escriba su Contraseña">
+                        <input type="password" name="pswd1" id="pswd1" placeholder="Escriba su Contraseña">
                     </td>
                 </tr>
                 <tr class="obligatory">
@@ -185,7 +209,7 @@
                         Comprobar Contraseña:
                     </td>
                     <td>
-                        <input type="password" name="pswd2" id="" placeholder="Escriba de Nuevo su Contraseña">
+                        <input type="password" name="pswd2" id="pswd2" placeholder="Escriba de Nuevo su Contraseña">
                     </td>
                 </tr>
                 <tr>
@@ -205,22 +229,3 @@
     </div>
 </body>
 </html>
-
-<!--
-    
-<script>
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("response").innerHTML = this.responseText;
-        } else {
-            console.log('Hola');
-        }
-    };
-    xhttp.open(
-            "GET", "http://tucodigo.mx/index.php?estado=1&mpio=1&b_query=mpio",
-            true);
-    xhttp.send(null);
-</script>
-
--->

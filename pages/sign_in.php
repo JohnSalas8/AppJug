@@ -33,8 +33,8 @@
                     <button class="btn navbar-btn" id="btn-games">Juegos</button>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="pages/sign_in.php"><span class="glyphicon glyphicon-user"></span> Iniciar Sesión</a></li>
-                    <li><a href="pages/create_count.php"><span class="glyphicon glyphicon-log-in"></span> Registrarse</a></li>
+                    <li><a href="sign_in.php"><span class="glyphicon glyphicon-user"></span> Iniciar Sesión</a></li>
+                    <li><a href="../pages/create_count.php"><span class="glyphicon glyphicon-log-in"></span> Registrarse</a></li>
                 </ul>
             </div>
         </div>
